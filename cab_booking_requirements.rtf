@@ -1,0 +1,87 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Bahnschrift Light SemiCondensed;}{\f1\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\ul\b\f0\fs36\lang9 CAB SERVICE SYSTEM\ulnone\b0\par
+
+\pard\sa200\sl276\slmult1\fs22\par
+Today, we have wide variety of options for trasportaion. \b 'myCab'\b0  Introduces digital system for cab service.Onilne Cab booking is familiar to this genration. \b 'myCab'\b0   is a growing Cab services management company. They wanted to digitalise their cab management services system. They operate cabs locally and for long distance travels. They have a variety of cab models to offer to the customers. \par
+\b\par
+1. \ul INTRODUCTION\par
+\ulnone\b0\tab 1.1\ul Purpose of Document:\par
+\ulnone\tab\tab The purpose of this document is to provide a working product to manage cab service by both passengers and drivers. And it capture all the details of passenger and dtrivers. Also can monitor the cab. \tab 1.2\ul Scope of the project\ulnone\par
+\tab\tab This digitalised system will help users to schedule the rides at any time, any where. Passenger can hire any ca based on model, pickup time and place.\par
+\tab 1.3 \ul Overview\par
+\ulnone\tab\tab And myCab have a variety of cab models which help users to schedule the rides at any time, any where. Users can choose the cab  for both local and long distance travels. Login facility with two authentication (such as captcha and a picture) is allowed to ensure the security. Both Passenger profile info and Cab master details will be captured in this system. Cab schedule details with fare shall be maintained [fare can change depending on when they book]. Cab ticket booking details with tax shall be stored.Payment shall be collected and invoice shall be given to the Customer.Feedback shall be collected.\par
+\b 2. \ul OVERALL DESCRIPTION\par
+\ulnone\b0 2.1 \ul CLIENT NEEDS\par
+\ulnone\tab Client needs a digital system to manage cab booking. Login by captcha and picture. They have a variety of cab models. Should allow cab search facilty.User can hire any cab based on their own priority. Capture information of both the passenger and dirver.Cab master details shall be captured .Cab schedule details with fare shall be maintained [far can change depending on when they book].Cab ticket booking details with tax shall be stored.Paymement shall be collected and invoice should be generated. And should collect the feedback.\par
+2.2 \ul ASSUMPTIONS AND DESCRIPTIONS\par
+\ulnone\tab Every user should create an account. they can choose their role (either passenger or driver).\tab  Login should done by two authentication(such as captcha and picture). Passenger can schedule cab. Also passenger can search cab by drop off loaction. We can opt the cab from the list of cab based on the time expected drop off time, or pick up time. Passengers are allowed to see the details of cab as well as the fare wioth tax. Ticket will be provided after confirming trip. Then an invoice will be generated after choosing payment mode. Collect the feedaback after every trip.  \par
+\b 3. \ul ACTORS\ulnone\tab\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0 Customer/Passenger\par
+{\pntext\f1\'B7\tab}Admin\par
+{\pntext\f1\'B7\tab}Drivers\b\par
+
+\pard\sa200\sl276\slmult1 4. \ul FUNCTIONAL REQUIREMENTS\par
+\ulnone\b0 4.1 \ul SIGNUP PAGE\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ulnone User can enter their full name, mobile number, email id and password. Email id and password should verify. When user clicks the submit button, all the details will be stored in the database.\par
+{\pntext\f1\'B7\tab}Full name [ first name, last name should not be blank. character length should be at least 2. No special characters and numbers are allowed.]. Full name is captured from a field (text Field or edit Text ...depends on language we use).\par
+{\pntext\f1\'B7\tab}Mobile number [Should be a valid number, character length should be numbers of length 10 numbers. And we can select country code. (+91 for India)]. Mobile numbers captured from a field (text Field or edit Text ...depends on language we use).\par
+{\pntext\f1\'B7\tab}Mail ID [Should not be blank, only valid and unique email is allowed]. Email id is captured from a field (depends on language we use).\par
+{\pntext\f1\'B7\tab}Username [Email id is the username of user.]\par
+{\pntext\f1\'B7\tab}Password [Password should contain special characters, both uppercase and lowercase letters.] Password is captured from a field (password depends on language we use).\par
+{\pntext\f1\'B7\tab}Confirm Password [Re-enter the password.] Confirm the password by re-entering the same password. Password is captured from a field (password depends on language we use).\par
+{\pntext\f1\'B7\tab}Photo [ Photo is not mandatory for passengers]\par
+{\pntext\f1\'B7\tab}Submit button will validate the given data and it confirms that there is no user in the same information.\par
+{\pntext\f1\'B7\tab}An authentication message will send to the user through the given email id or phone number.\lang9\par
+
+\pard\sa200\sl276\slmult1 4.2 \ul LOGIN PAGE\par
+\ulnone\tab In the login page both passengers and drivers can login by using the username and passwordField in a text. Login button will validate the data. It confirms that the given details are stored in the database. if the username and paswword does not exist, login button will give an error message to the user. Forgot password should also visible at this window. After submitting this page, users are navigated to registration of cab page. \par
+4.3 \ul REGISTRATION OF CAB (cab master info)\ulnone\par
+After signup, users can select their category (either passenger or driver). If user choose to stay as passenger, then they can move to the next page. And if the user wants to stay as a driver, then they can register their cab. Cab Registration can be done by uploading all the necessary documents and details (model, number, fuel etc.) of the vehicle. Drivers should upload their License in this window. Also, drivers should upload their own picture. The registration of cab can be an option (ROLE) in the user profile. If the user wants to be a driver in the future, they can simply choose this option (ROLE) to change their role. And also, drivers are always allowed to delete their cab in future if they want to do it. This feature will be given in user profile.\par
+4.4 \ul USER PROFILE\ulnone\par
+\tab User can always update their phone number and mail id by verifying it. In the profile window, user can view/update their profile photo if they need it. Users have the privileges to update their password. User can always change their role by opting the ROLE option given in the user profile. Also, the present role of the user will be displayed in the user profile.\par
+\par
+Normally a user/passenger can view the following data in user profile:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Name\par
+{\pntext\f1\'B7\tab}Mobil number\par
+{\pntext\f1\'B7\tab}Email id\par
+{\pntext\f1\'B7\tab}Role\par
+
+\pard\sa200\sl276\slmult1 For drivers, user profile will be different. It includes,\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Name\par
+{\pntext\f1\'B7\tab}Mobile number\par
+{\pntext\f1\'B7\tab}Email id\par
+{\pntext\f1\'B7\tab}Role\par
+{\pntext\f1\'B7\tab}Cab Type\par
+{\pntext\f1\'B7\tab}Cab number\par
+{\pntext\f1\'B7\tab}Current location of cab\par
+{\pntext\f1\'B7\tab}Registration number\par
+{\pntext\f1\'B7\tab}A Button to delete their cab registration.\par
+{\pntext\f1\'B7\tab}Also, it shows the total number of trips.\par
+{\pntext\f1\'B7\tab}And also, the rating.\lang9\par
+
+\pard\sa200\sl276\slmult1 4.5 \ul CAB SEARCHING FACILITY\par
+\ulnone\tab  Users can search a cab by entering drop off location, model number, time etc. Users are allowed to see the list of cabs near to them. And are allowed to choose one. Display available vehicles with their current location and car details nearest to the passenger. We can choose the nearest car by its specifications. Passenger can select the cab based on pick up time and drop off time.\par
+4.6 \ul CAB SCHEDULE WITH FARE DETAILS\par
+\ulnone\tab If a user wants to book a cab for later, they can scheduke it.User can schedule a cab by choosing a pick up time. We can compare different cabs by their fare. Fare can change depending on when they book. After confirming booking, issue a ticket for the particular travel.\par
+4.7 \ul FARE AND TAX\ulnone\par
+\tab Cab fare and tax will be stored. All the trasaction details should be captured.\par
+4.8 \ul PAYMENT\par
+\ulnone\tab Payments can be done in various ways such as cash, UPI Payment, Net banking etc. If a user gets a ticket after confirming a ride, the payment window will open to confirm the mode of payment. Next window will be open based on the mode of payment. If user chooses the cash payment, the invoice will generate after ride and payment. But if user prefer the UPI payment (or online payment), user navigates to the payment page. Invoice will generate after the payment and trip. All the payment history will be stored and can view the history later.\par
+4.9 \ul FEEDBACK\ulnone\par
+\tab Always collect feedback about the driver, cab and the ride after every ride. Also use this feedback for future use. Feedback will help the driver to get more rides. Suggest a rating after every trip. Give a five-star rating option to rate the drive.\par
+\b 5. \ul NON FUNCIONAL REQUIREMENTS\par
+\ulnone\b0 Non  functional requirements are also improtant. Those are listed below:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Performance\par
+{\pntext\f1\'B7\tab}Security\par
+{\pntext\f1\'B7\tab}Safety\par
+{\pntext\f1\'B7\tab}Quality\par
+
+\pard\sa200\sl276\slmult1\par
+}
+ 
